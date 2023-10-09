@@ -28,6 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Me: adding Python Checker action from marketplace
+      - name: Python syntax checker
+        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
