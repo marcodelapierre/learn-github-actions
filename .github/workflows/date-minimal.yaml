@@ -17,6 +17,6 @@ jobs:
       - run: Get-Date
   final:
     runs-on: ubuntu-latest
-    needs: [ date-ubuntu, date-macos, date-windows ]
+    needs: [ ubuntu, macos, windows ]
     steps:
       - run: date
