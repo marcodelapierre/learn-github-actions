@@ -1,0 +1,29 @@
+name: PYTHON
+
+on: push
+
+env:
+  ARTIFACT_NAME: "learn-github-actions"
+
+jobs:
+  test:
+    name: Test
+    container:
+      image: python:3.12
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      - run: python ./hello.py
+        name: Run
+  build:
+    name: Build
+    container:
+      image: python:3.12
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      - uses: actions/upload-artifact@v3.1.3
+        name: Upload
+        with: 
+          name: ${{ env.ARTIFACT_NAME }}
+          path: .
