@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Checkout
-      - run: |
-          echo "Hello World at $(date)." >./out-artifact
+      - run: echo "Hello World at $(date)." >./out-artifact
+        name: Generate
       - uses: actions/upload-artifact@v3.1.3
         name: Upload
         with:
