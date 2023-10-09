@@ -1,0 +1,21 @@
+name: ARTIFACT
+
+on: push
+
+env:
+  name: "artifact-doc"
+
+jobs:
+  artifact:
+    name: Artifact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout
+      - run: |
+          echo "Hello World at $(date)." >./out-artifact
+      - uses: actions/upload-artifact@v3.1.3
+        name: Upload
+        with:
+          name: ${{ env.name }}
+          path: ./out-artifact
