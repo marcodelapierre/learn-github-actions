@@ -1,0 +1,48 @@
+name: DATE
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  date-ubuntu:
+    name: Date Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Print date
+        run: date
+
+  date-macos:
+    name: Date macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Print date
+        run: date
+
+  date-windows:
+    name: Date Ubuntu
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Print date
+        run: Get-Date
+
+  date-ubuntu-final:
+    name: Date Ubuntu final
+    runs-on: ubuntu-latest
+    needs: [ ubuntu-latest, macos-latest, windows-latest ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Print date
+        run: date
