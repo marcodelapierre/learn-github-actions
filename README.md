@@ -6,3 +6,5 @@ A practice repository for me to learn the basics of GitHub Workflows
 ![DATE_MINI badge](https://github.com/marcodelapierre/learn-github-actions/workflows/DATE_MINI/badge.svg)  
 ![ARTIFACT badge](https://github.com/marcodelapierre/learn-github-actions/workflows/ARTIFACT/badge.svg)  
 ![PYTHON badge](https://github.com/marcodelapierre/learn-github-actions/workflows/PYTHON/badge.svg)  
+
+(little test edit)
