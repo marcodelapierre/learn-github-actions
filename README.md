@@ -7,4 +7,3 @@ A practice repository for me to learn the basics of GitHub Workflows
 ![ARTIFACT badge](https://github.com/marcodelapierre/learn-github-actions/workflows/ARTIFACT/badge.svg)  
 ![PYTHON badge](https://github.com/marcodelapierre/learn-github-actions/workflows/PYTHON/badge.svg)  
 
-(little test edit)
